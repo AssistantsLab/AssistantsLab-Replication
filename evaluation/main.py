@@ -3,12 +3,13 @@ from metrics.Metric import Metric
 import models.impl.Michielo.mt5__small_en__nl_translation
 import models.impl.Michielo.mt5__small_nl__en_translation
 import models.impl.facebook.nllb__200__3___3B
+import models.impl.Helsinki__NLP.opus__mt__en__fr
 
 
 model_dict = {
     "michielo_en-nl": models.impl.Michielo.mt5__small_en__nl_translation.Model("Michielo/mt5-small_en-nl_translation"),
     "michielo_nl-en": models.impl.Michielo.mt5__small_nl__en_translation.Model("Michielo/mt5-small_nl-en_translation"),
-    "nllb_3.3B": models.impl.facebook.nllb__200__3___3B.Model("facebook/nllb-200-3.3B")
+    "nllb_3.3B": models.impl.facebook.nllb__200__3___3B.Model("facebook/nllb-200-3.3B"),
 }
 
 
@@ -33,19 +34,20 @@ def main():
     args = parser.parse_args()
 
     metrics = []
-    if args.all:
-        metrics = [Metric.BLEU, Metric.CHRF, Metric.CHRF_PLUS_PLUS]
-    elif args.bleu:
+    if args.bleu:
         metrics.append(Metric.BLEU)
-    elif args.chrf:
+    if args.chrf:
         metrics.append(Metric.CHRF)
-    elif args.chrf_plus_plus:
+    if args.chrf_plus_plus:
         metrics.append(Metric.CHRF_PLUS_PLUS)
-    else:
-        print("You did not select any evaluation metrics!")
-        print("Please run with one or more of the following: '--bleu' '--chrf' '--chrf++' '--all'")
-        print("For more help, please run with --help")
-        exit(0)
+    if not metrics:
+        if args.all:
+            metrics = [Metric.BLEU, Metric.CHRF, Metric.CHRF_PLUS_PLUS]
+        else:
+            print("You did not select any evaluation metrics!")
+            print("Please run with one or more of the following: '--bleu' '--chrf' '--chrf++' '--all'")
+            print("For more help, please run with --help")
+            exit(0)
 
     print(f"Model '{args.model}' selected.")
     if metrics:
