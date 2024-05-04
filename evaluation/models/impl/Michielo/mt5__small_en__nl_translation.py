@@ -1,6 +1,5 @@
 import re
 
-import torch
 from tqdm import tqdm
 
 from models.model import ModelClass
