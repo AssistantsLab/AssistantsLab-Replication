@@ -3,7 +3,6 @@ from metrics.Metric import Metric
 import models.impl.Michielo.mt5__small_en__nl_translation
 import models.impl.Michielo.mt5__small_nl__en_translation
 import models.impl.facebook.nllb__200__3___3B
-import models.impl.Helsinki__NLP.opus__mt__en__fr
 
 
 model_dict = {
