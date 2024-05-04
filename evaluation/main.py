@@ -3,12 +3,16 @@ from metrics.Metric import Metric
 import models.impl.Michielo.mt5__small_en__nl_translation
 import models.impl.Michielo.mt5__small_nl__en_translation
 import models.impl.facebook.nllb__200__3___3B
+import models.impl.Helsinki__NLP.opus__mt__en__fr
+import models.impl.google.madlad400__3b__mt
 
 
 model_dict = {
     "michielo_en-nl": models.impl.Michielo.mt5__small_en__nl_translation.Model("Michielo/mt5-small_en-nl_translation"),
     "michielo_nl-en": models.impl.Michielo.mt5__small_nl__en_translation.Model("Michielo/mt5-small_nl-en_translation"),
     "nllb_3.3B": models.impl.facebook.nllb__200__3___3B.Model("facebook/nllb-200-3.3B"),
+    "opus_mt_en-fr": models.impl.Helsinki__NLP.opus__mt__en__fr.Model("Helsinki-NLP/opus-mt-en-fr"),
+    "madlad-400_3b": models.impl.google.madlad400__3b__mt.Model("google/madlad400-3b-mt")
 }
 
 
