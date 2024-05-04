@@ -77,6 +77,7 @@ We have decided to use the following replacements of special characters in model
 - `-` -> `__`
 - `.` -> `___`
 
+Please note this does not include the model registry in `main.py`. The models here can be shortened and can contain dots and dashes.
 
 ### Adding datasets
 
