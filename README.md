@@ -9,6 +9,10 @@ Contents:
 
 We have made a suite to evaluate translation models and replicate our findings. This is able to be used without writing any code in #Usage, or you can add your own models and metrics in #Developers.
 
+TODO:
+- Supporting multiple language-pairs for many-to-many translation models
+- Supporting multiple datasets per model
+
 ## Usage
 
 This code can be used to replicate the benchmarks on various translation models. Evaluation is done on BLEU, chrF, and chrF++ metrics.
