@@ -33,6 +33,8 @@ Possible models are:
   - `michielo_en-nl` for the [Michielo/mt5-small_en-nl_translation](https://huggingface.co/Michielo/mt5-small_en-nl_translation) model.
   - `michielo_nl-en` for the [Michielo/mt5-small_nl-en_translation](https://huggingface.co/Michielo/mt5-small_nl-en_translation) model.
   - `nllb_3.3B` for the [facebook/nllb-200-3.3B](https://huggingface.co/facebook/nllb-200-3.3B) model.
+
+    please note this model takes up ~19GB vram.
   
   Possible metrics are one or more of the following:
   - `bleu`
