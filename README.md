@@ -71,7 +71,7 @@ When adding support for a model, please ensure to place this model file in `mode
 
 We have decided to use the following replacements of special characters in model files. Although these replacements are just our preferences, we believe it would be beneficial to keep this as a standard:
 - `-` -> `__`
-- `+` -> `___`
+- `.` -> `___`
 
 
 ### Adding datasets
