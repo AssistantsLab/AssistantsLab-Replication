@@ -39,7 +39,8 @@ Possible models are:
   - `nllb_3.3B` for the [facebook/nllb-200-3.3B](https://huggingface.co/facebook/nllb-200-3.3B) model.
 
     please note this model takes up ~19GB vram.
-  -   `madlad-400_3b` for the [google/madlad400-3b-mt](https://huggingface.co/google/madlad400-3b-mt) model.
+  - `opus_mt_en-fr` for the [Helsinki-NLP/opus-mt-en-fr](https://huggingface.co/Helsinki-NLP/opus-mt-en-fr) model.
+  - `madlad-400_3b` for the [google/madlad400-3b-mt](https://huggingface.co/google/madlad400-3b-mt) model.
   
   Possible metrics are one or more of the following:
   - `bleu`
